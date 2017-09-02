@@ -8,7 +8,7 @@ var square = new Square(4);
 var pentagon = new Pentagon(1, 2, 3, 4, 5);
 var shape = new Shape();
 
-console.log(triangle.get_type());
+console.log(triangle.get_type()); // A method on shape
 console.log(square.get_type());
 console.log(pentagon.get_type());
 console.log(shape);

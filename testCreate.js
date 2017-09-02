@@ -6,7 +6,7 @@ var {Pentagon} = require('./create/Pentagon');
 var triangle = Object.create(Triangle, {
     side1: { value: 1},
     side2: { value: 2},
-    side3: { value: 3},    
+    side3: { value: 3},
 });
 
 var square = Object.create(Square, {
@@ -29,6 +29,8 @@ console.log(pentagon.get_type());
 
 console.log('-'.repeat(24));
 
+// Object.create don't have access to instanceOf because they are created without a constructor
+// this is so because it just creates a new object with the specifc prototype object and properties
 console.log(`Triangle is a Prototype of triangle: ${Triangle.isPrototypeOf(triangle)}`);
 console.log(`Shape is a Prototype of triangle: ${Shape.isPrototypeOf(triangle)}`);
 
